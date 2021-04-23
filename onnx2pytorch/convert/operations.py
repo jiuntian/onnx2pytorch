@@ -171,6 +171,8 @@ def convert_operations(onnx_model, batch_dim=0):
             op = OperatorWrapper(torch.log)
         elif node.op_type == "Exp":
             op = OperatorWrapper(torch.exp)
+        elif node.op_type == "Not":
+            op = torch.logical_not
         else:
             op = getattr(torch, node.op_type.lower(), None)
             if op is None:
