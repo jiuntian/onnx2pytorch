@@ -71,6 +71,8 @@ def convert_operations(onnx_model, batch_dim=0):
             )
             shape = numpy_helper.to_array(shape[0]) if shape else None
             op = Reshape(shape)
+        elif node.op_type == "Expand":
+            op = Expand()
         elif node.op_type == "Shape":
             op = Shape()
         elif node.op_type == "Size":

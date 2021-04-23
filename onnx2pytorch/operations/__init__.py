@@ -3,6 +3,7 @@ from .batchnorm import BatchNormUnsafe
 from .instancenorm import InstanceNormUnsafe
 from .cast import Cast
 from .constant import ConstantOfShape
+from .expand import Expand
 from .flatten import Flatten
 from .gather import Gather
 from .onehot import OneHot
@@ -22,6 +23,7 @@ __all__ = [
     "InstanceNormUnsafe",
     "Cast",
     "ConstantOfShape",
+    "Expand",
     "Flatten",
     "Gather",
     "OneHot",
