@@ -10,6 +10,7 @@ from .pad import Pad
 from .pooling import GlobalAveragePool
 from .reshape import Reshape
 from .shape import Shape
+from .size import Size
 from .slice import Slice
 from .split import Split
 from .squeeze import Squeeze
