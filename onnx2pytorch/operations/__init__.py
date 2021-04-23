@@ -33,4 +33,5 @@ __all__ = [
     "Squeeze",
     "Resize",
     "Upsample",
+    "Size"
 ]
