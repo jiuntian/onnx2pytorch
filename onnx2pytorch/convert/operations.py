@@ -87,6 +87,8 @@ def convert_operations(onnx_model, batch_dim=0):
             op = Cast(**extract_attributes(node))
         elif node.op_type == "Where":
             op = torch.where
+        elif node.op_type == "If":
+            op = torch.where
         elif node.op_type == "Equal":
             op = torch.eq
         elif node.op_type == "Mul":
